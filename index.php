@@ -1,7 +1,7 @@
 <?php
 $is_auth = rand(0, 1);
 
-$user_name = ''; // укажите здесь ваше имя
+$user_name = 'Yerkebulan Ardabayev'; // укажите здесь ваше имя
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -41,7 +41,11 @@ $user_name = ''; // укажите здесь ваше имя
         </form>
         <div class="header__nav-wrapper">
             <!-- здесь должен быть PHP код, который показывает следующий тег по условию -->
-            <nav class="header__nav">
+            <nav class="header__nav">?php
+                if ($is_auth==1)
+                {
+                print ("Yerkebulan Ardabayev");
+                }
                 <ul class="header__my-nav">
                     <li class="header__my-page header__my-page--popular">
                         <a class="header__page-link header__page-link--active" title="Популярный контент">
