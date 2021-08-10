@@ -41,11 +41,9 @@ $user_name = 'Yerkebulan Ardabayev'; // укажите здесь ваше им�
         </form>
         <div class="header__nav-wrapper">
             <!-- здесь должен быть PHP код, который показывает следующий тег по условию -->
+            <?php if ($is_auth==1):?>
             <nav class="header__nav">
-                <?php if ($is_auth==1):?>
-                    <p>Yerkebulan Ardabayev</p>
-                <?php endif; ?>
-                               <ul class="header__my-nav">
+                    <ul class="header__my-nav">
                     <li class="header__my-page header__my-page--popular">
                         <a class="header__page-link header__page-link--active" title="Популярный контент">
                             <span class="visually-hidden">Популярный контент</span>
@@ -112,7 +110,8 @@ $user_name = 'Yerkebulan Ardabayev'; // укажите здесь ваше им�
                         <a class="header__post-button button button--transparent" href="adding-post.html">Пост</a>
                     </li>
                 </ul>
-            </nav>
+               </nav>
+            <?php endif; ?>
         </div>
     </div>
 </header>
